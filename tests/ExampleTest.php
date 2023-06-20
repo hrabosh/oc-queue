@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Hrabja\OcQueue\Tests;
 
 use PHPUnit\Framework\TestCase;
 

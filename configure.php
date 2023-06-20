@@ -129,14 +129,11 @@ function setupTestingLibrary(string $testingLibrary): void
         unlink(__DIR__.'/tests/ExampleTestPhpunit.php');
         unlink(__DIR__.'/.github/workflows/run-tests-phpunit.yml');
 
-        rename(
-            from: __DIR__.'/tests/ExampleTestPest.php',
-            to: __DIR__.'/tests/ExampleTest.php'
-        );
+        rename(__DIR__.'/tests/ExampleTestPest.php', __DIR__.'/tests/ExampleTest.php');
 
         rename(
-            from: __DIR__.'/.github/workflows/run-tests-pest.yml',
-            to: __DIR__.'/.github/workflows/run-tests.yml'
+            __DIR__.'/.github/workflows/run-tests-pest.yml',
+            __DIR__.'/.github/workflows/run-tests.yml'
         );
 
         replace_in_file(__DIR__.'/composer.json', [
@@ -151,13 +148,13 @@ function setupTestingLibrary(string $testingLibrary): void
         unlink(__DIR__.'/.github/workflows/run-tests-pest.yml');
 
         rename(
-            from: __DIR__.'/tests/ExampleTestPhpunit.php',
-            to: __DIR__.'/tests/ExampleTest.php'
+            __DIR__.'/tests/ExampleTestPhpunit.php',
+            __DIR__.'/tests/ExampleTest.php'
         );
 
         rename(
-            from: __DIR__.'/.github/workflows/run-tests-phpunit.yml',
-            to: __DIR__.'/.github/workflows/run-tests.yml'
+            __DIR__.'/.github/workflows/run-tests-phpunit.yml',
+            __DIR__.'/.github/workflows/run-tests.yml'
         );
 
         replace_in_file(__DIR__.'/composer.json', [
@@ -175,8 +172,8 @@ function setupCodeStyleLibrary(string $codeStyleLibrary): void
         unlink(__DIR__.'/.github/workflows/fix-php-code-style-issues-cs-fixer.yml');
 
         rename(
-            from: __DIR__.'/.github/workflows/fix-php-code-style-issues-pint.yml',
-            to: __DIR__.'/.github/workflows/fix-php-code-style-issues.yml'
+            __DIR__.'/.github/workflows/fix-php-code-style-issues-pint.yml',
+            __DIR__.'/.github/workflows/fix-php-code-style-issues.yml'
         );
 
         replace_in_file(__DIR__.'/composer.json', [
@@ -190,8 +187,8 @@ function setupCodeStyleLibrary(string $codeStyleLibrary): void
         unlink(__DIR__.'/.github/workflows/fix-php-code-style-issues-pint.yml');
 
         rename(
-            from: __DIR__.'/.github/workflows/fix-php-code-style-issues-cs-fixer.yml',
-            to: __DIR__.'/.github/workflows/fix-php-code-style-issues.yml'
+            __DIR__.'/.github/workflows/fix-php-code-style-issues-cs-fixer.yml',
+            __DIR__.'/.github/workflows/fix-php-code-style-issues.yml'
         );
 
         replace_in_file(__DIR__.'/composer.json', [
