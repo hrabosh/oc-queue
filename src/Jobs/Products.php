@@ -2,6 +2,6 @@
 
 namespace Hrabja\OcQueue\Jobs;
 
-class Jobs {
-    
+class Jobs
+{
 }

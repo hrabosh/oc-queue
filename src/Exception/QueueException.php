@@ -1,10 +1,12 @@
 <?php
+
 namespace Hrabja\OcQueue\Exception;
 
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Throwable;
 
-class QueueException implements ExceptionHandler {
+class QueueException implements ExceptionHandler
+{
     /**
      * Report or log an exception.
      *
@@ -16,9 +18,11 @@ class QueueException implements ExceptionHandler {
         //处理异常
     }
 
-    public function shouldReport(Throwable $e) {
+    public function shouldReport(Throwable $e)
+    {
         //
     }
+
     /**
      * Render an exception into an HTTP response.
      *
@@ -29,6 +33,7 @@ class QueueException implements ExceptionHandler {
     public function render($request, Throwable $e)
     {
     }
+
     /**
      * Render an exception to the console.
      *
